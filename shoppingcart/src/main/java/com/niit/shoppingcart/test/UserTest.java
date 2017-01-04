@@ -17,11 +17,11 @@ public static void main(String[] args) {
 		User user =(User) context.getBean("user");
 		
 		user.setId(102);
-		user.setName("prabhu");
-		user.setPswd("prabhu123");
+		user.setName("pragathi");
+		user.setPswd("praghathi");
 		user.setAddr("bglr");
-		user.setPhnum("9900445689");
-		user.setEmail("prabhu.l@gmail");
+		user.setPhnum("8880445689");
+		user.setEmail("praghathi@gmail");
 		
 		userDao.addUser(user);
 	}

@@ -29,7 +29,7 @@ public class HomeController
 	@Autowired
 	UserDao userDao;
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping("/")
 	public String getLoad(Model model){
 		System.out.println("on load");
 		model.addAttribute("category", category);
@@ -46,11 +46,11 @@ public class HomeController
 	
 }
 	
-	@RequestMapping("/register")
+	@RequestMapping("/signup")
 	public ModelAndView getRegister(Model m,@RequestParam(value="error",required=false)String error)
 	{
 		m.addAttribute("user",new User());
-		ModelAndView model=new ModelAndView("signUp");
+		ModelAndView model=new ModelAndView("signup");
 				
 	    return model;
 	}
@@ -74,7 +74,9 @@ public class HomeController
 		return "login";
 	}
 	
-	@RequestMapping(value="/login")
+	
+	
+	@RequestMapping(value="/loginpage")
 	public String  login(@RequestParam(value="error",required=false)String error,@RequestParam(value="logout",required=false) String logout,Model model)
 	{
 		if(error!=null)

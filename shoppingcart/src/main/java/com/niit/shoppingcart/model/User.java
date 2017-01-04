@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 
 public class User {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	//@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String name;
 	private String pswd;
